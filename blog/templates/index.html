@@ -1,0 +1,13 @@
+<html>
+    <h1>EU SOU O SEU INDEX</h1>
+    {% if posts %}
+        {% for post in posts %}
+            <div>
+                <h3><a href="/post/{{ post.slug }}"> {{post.title}} </a></h3>
+                <p>{{post.summary}}</p>
+            </div>
+        {% endfor %}
+    {% endif %}{% if not posts %}
+            <h2>TA VAZIO MANÉ FAZ UNS POST AÍ</h2>
+    {% endif %}
+</html>
